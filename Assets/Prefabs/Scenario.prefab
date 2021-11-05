@@ -95,6 +95,36 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &3980783485200685390
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 243950672691534345}
+  m_Layer: 0
+  m_Name: spawn_ob
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &243950672691534345
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3980783485200685390}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.28025025, y: 0.3199997, z: 6.73928}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6716836657767843209}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6001625968580290595
 GameObject:
   m_ObjectHideFlags: 0
@@ -606,6 +636,7 @@ MonoBehaviour:
   jump: {x: 0, y: 0, z: 0}
   right: {x: 0, y: 0, z: 0}
   left: {x: 0, y: 0, z: 0}
+  air: 1
   moveSpeed: 3
 --- !u!114 &6716836657559655891
 MonoBehaviour:
@@ -683,6 +714,7 @@ Transform:
   - {fileID: 6716836656878898502}
   - {fileID: 7304854067862133093}
   - {fileID: 3026392667955213211}
+  - {fileID: 243950672691534345}
   - {fileID: 727577087845355924}
   m_Father: {fileID: 6716836657141987258}
   m_RootOrder: 0
@@ -890,7 +922,7 @@ Transform:
   m_LocalScale: {x: 1, y: 5, z: 0.2}
   m_Children: []
   m_Father: {fileID: 6716836657767843209}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3077388572736299012
 MeshFilter:

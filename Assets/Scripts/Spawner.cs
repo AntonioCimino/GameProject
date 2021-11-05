@@ -5,6 +5,8 @@ public class Spawner : MonoBehaviour
     public GameObject prefab = null;
     public GameObject prefab1 = null;
     public GameObject prefab2 = null;
+    public Transform reset = null;
+
 
     private void Start()
     {
@@ -16,19 +18,19 @@ public class Spawner : MonoBehaviour
 
         if(n == 0){
             GameObject go = Instantiate(prefab);
-            go.transform.position = new Vector3(-8.60f, 1.50f, -7.50f);
+            go.transform.position = new Vector3(reset.position.x, reset.position.y, reset.position.z);
             Invoke("SpawnObstacle", 5.0f);
         }
 
          if(n == 1){
             GameObject go = Instantiate(prefab1);
-            go.transform.position = new Vector3(-10.60f, 7.50f, -1f);
+            go.transform.position = new Vector3(reset.position.x - 2, reset.position.y, reset.position.z);
             Invoke("SpawnObstacle", 5.0f);
          }
 
          if(n == 2){
             GameObject go = Instantiate(prefab2);
-            go.transform.position = new Vector3(-6.60f, 7.50f, 1f);
+            go.transform.position = new Vector3(reset.position.x + 4, reset.position.y, reset.position.z);
             Invoke("SpawnObstacle", 5.0f);
          }
     }
