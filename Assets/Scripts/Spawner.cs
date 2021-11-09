@@ -18,13 +18,13 @@ public class Spawner : MonoBehaviour
 
         if(n == 0){
             GameObject go = Instantiate(prefab);
-            go.transform.position = new Vector3(reset.position.x, reset.position.y, reset.position.z);
+            go.transform.position = new Vector3(reset.position.x + 1, reset.position.y, reset.position.z);
             Invoke("SpawnObstacle", 5.0f);
         }
 
          if(n == 1){
             GameObject go = Instantiate(prefab1);
-            go.transform.position = new Vector3(reset.position.x - 2, reset.position.y, reset.position.z);
+            go.transform.position = new Vector3(reset.position.x - 1, reset.position.y, reset.position.z);
             Invoke("SpawnObstacle", 5.0f);
          }
 
