@@ -8,6 +8,7 @@ public class Obstacle : MonoBehaviour
     {
         this.transform.Translate(Vector3.back * Movespeed * Time.deltaTime);
     }
+
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("wallend") == true)
