@@ -12,7 +12,7 @@ public class MLAgentPlayer : Agent
     private Rigidbody rb = null;
     public bool air = true;
     private float points = 0;
-    public float moveSpeed = 0.5f;
+    public float moveSpeed = 0.1f;
     
     public override void Initialize()
     {
@@ -60,6 +60,13 @@ public class MLAgentPlayer : Agent
 
     private void OnCollisionStay(Collision collision)
     {
+
+        if (collision.gameObject.CompareTag("cherry") == true)
+        {
+            AddReward(0.5f);
+            Destroy(collision.gameObject);
+        }
+
         if (collision.gameObject.CompareTag("obstacle") == true || collision.gameObject.CompareTag("obstacle1") == true
         || collision.gameObject.CompareTag("obstacle2") == true)
         {

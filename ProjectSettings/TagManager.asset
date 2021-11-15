@@ -14,6 +14,7 @@ TagManager:
   - floor
   - wallward1
   - wallward2
+  - cherry
   layers:
   - Default
   - TransparentFX

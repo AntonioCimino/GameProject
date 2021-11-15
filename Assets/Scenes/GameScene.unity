@@ -524,7 +524,7 @@ PrefabInstance:
     - target: {fileID: 6716836657559655884, guid: 83ff085338d42a54cbb1444814916fca, type: 3}
       propertyPath: m_Model
       value: 
-      objectReference: {fileID: 5022602860645237092, guid: fb5cba337fee88d43a3928a83121dc62, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 6716836657559655884, guid: 83ff085338d42a54cbb1444814916fca, type: 3}
       propertyPath: m_BehaviorName
       value: MLPlayer
@@ -591,19 +591,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6716836657559655890, guid: 83ff085338d42a54cbb1444814916fca, type: 3}
       propertyPath: m_MaxRayDegrees
-      value: 100
+      value: 140
       objectReference: {fileID: 0}
     - target: {fileID: 6716836657559655890, guid: 83ff085338d42a54cbb1444814916fca, type: 3}
       propertyPath: m_RaysPerDirection
-      value: 4
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 6716836657559655890, guid: 83ff085338d42a54cbb1444814916fca, type: 3}
       propertyPath: m_SphereCastRadius
-      value: 0.36
+      value: 0.71
       objectReference: {fileID: 0}
     - target: {fileID: 6716836657559655890, guid: 83ff085338d42a54cbb1444814916fca, type: 3}
       propertyPath: m_EndVerticalOffset
-      value: 0.1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6716836657559655890, guid: 83ff085338d42a54cbb1444814916fca, type: 3}
       propertyPath: m_ObservationStacks
@@ -619,7 +619,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6716836657559655890, guid: 83ff085338d42a54cbb1444814916fca, type: 3}
       propertyPath: m_DetectableTags.Array.size
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 6716836657559655890, guid: 83ff085338d42a54cbb1444814916fca, type: 3}
       propertyPath: m_DetectableTags.Array.data[0]
@@ -653,6 +653,14 @@ PrefabInstance:
       propertyPath: m_DetectableTags.Array.data[7]
       value: obstacle2
       objectReference: {fileID: 0}
+    - target: {fileID: 6716836657559655890, guid: 83ff085338d42a54cbb1444814916fca, type: 3}
+      propertyPath: m_DetectableTags.Array.data[8]
+      value: cherry
+      objectReference: {fileID: 0}
+    - target: {fileID: 6716836657767843208, guid: 83ff085338d42a54cbb1444814916fca, type: 3}
+      propertyPath: c
+      value: 
+      objectReference: {fileID: 4719799151375571812, guid: 7ebf80b7ef10dd346890f5616568b0a0, type: 3}
     - target: {fileID: 6716836657767843208, guid: 83ff085338d42a54cbb1444814916fca, type: 3}
       propertyPath: reset
       value: 
@@ -728,3 +736,35 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 243950672691534345, guid: 83ff085338d42a54cbb1444814916fca, type: 3}
   m_PrefabInstance: {fileID: 6716836656455038947}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &6716836656455038949 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6716836657559655883, guid: 83ff085338d42a54cbb1444814916fca, type: 3}
+  m_PrefabInstance: {fileID: 6716836656455038947}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6716836656455038950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6716836656455038949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bb6b867a41448888c1cd4f99643ad71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SensorName: RayPerceptionSensor
+  m_DetectableTags:
+  - cherry
+  m_RaysPerDirection: 3
+  m_MaxRayDegrees: 12
+  m_SphereCastRadius: 0.5
+  m_RayLength: 20
+  m_RayLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967291
+  m_ObservationStacks: 1
+  rayHitColor: {r: 1, g: 0, b: 0, a: 1}
+  rayMissColor: {r: 1, g: 1, b: 1, a: 1}
+  m_StartVerticalOffset: 1
+  m_EndVerticalOffset: 1
