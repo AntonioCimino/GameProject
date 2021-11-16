@@ -64,6 +64,8 @@ public class MLAgentPlayer : Agent
         if (collision.gameObject.CompareTag("cherry") == true)
         {
             AddReward(0.5f);
+            points = points + 2;
+            score.text = "Score: " + points.ToString();
             Destroy(collision.gameObject);
         }
 
