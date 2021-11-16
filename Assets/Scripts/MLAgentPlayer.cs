@@ -63,7 +63,7 @@ public class MLAgentPlayer : Agent
 
         if (collision.gameObject.CompareTag("cherry") == true)
         {
-            AddReward(0.5f);
+            AddReward(0.4f);
             points = points + 2;
             score.text = "Score: " + points.ToString();
             Destroy(collision.gameObject);
@@ -72,14 +72,14 @@ public class MLAgentPlayer : Agent
         if (collision.gameObject.CompareTag("obstacle") == true || collision.gameObject.CompareTag("obstacle1") == true
         || collision.gameObject.CompareTag("obstacle2") == true)
         {
-            AddReward(-1.0f);          
+            AddReward(-0.8f);          
             Destroy(collision.gameObject);
             EndEpisode();
         }
 
         if (collision.gameObject.CompareTag("walltop") == true)
         {
-            AddReward(-0.9f);
+            AddReward(-0.8f);
             EndEpisode();
         }
 
