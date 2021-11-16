@@ -77,7 +77,7 @@ public class MLAgentPlayer : Agent
             EndEpisode();
         }
 
-        if (collision.gameObject.CompareTag("walltop") == true || collision.gameObject.CompareTag("floor") == true)
+        if (collision.gameObject.CompareTag("walltop") == true)
         {
             AddReward(-0.9f);
             EndEpisode();
