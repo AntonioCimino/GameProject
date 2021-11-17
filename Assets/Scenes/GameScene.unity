@@ -142,6 +142,88 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scrollY: 0
   scrollX: 0.2
+--- !u!1 &120820522 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1788246400000263424, guid: 83ff085338d42a54cbb1444814916fca, type: 3}
+  m_PrefabInstance: {fileID: 6716836656455038947}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &186447859
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 186447862}
+  - component: {fileID: 186447861}
+  - component: {fileID: 186447860}
+  m_Layer: 0
+  m_Name: EventSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &186447860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 186447859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalAxis: Horizontal
+  m_VerticalAxis: Vertical
+  m_SubmitButton: Submit
+  m_CancelButton: Cancel
+  m_InputActionsPerSecond: 10
+  m_RepeatDelay: 0.5
+  m_ForceModuleActive: 0
+--- !u!114 &186447861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 186447859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_FirstSelected: {fileID: 0}
+  m_sendNavigationEvents: 1
+  m_DragThreshold: 10
+--- !u!4 &186447862
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 186447859}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1368566635 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2650760352583326832, guid: 83ff085338d42a54cbb1444814916fca, type: 3}
+  m_PrefabInstance: {fileID: 6716836656455038947}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1480567478
 GameObject:
   m_ObjectHideFlags: 0
@@ -556,6 +638,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -0.87000066
       objectReference: {fileID: 0}
+    - target: {fileID: 1788246400000263424, guid: 83ff085338d42a54cbb1444814916fca, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1958816874591245098, guid: 83ff085338d42a54cbb1444814916fca, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.639
@@ -603,6 +689,10 @@ PrefabInstance:
     - target: {fileID: 2650454827022730742, guid: 83ff085338d42a54cbb1444814916fca, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0.39999968
+      objectReference: {fileID: 0}
+    - target: {fileID: 2842060213955869087, guid: 83ff085338d42a54cbb1444814916fca, type: 3}
+      propertyPath: m_Text
+      value: NEW GAME
       objectReference: {fileID: 0}
     - target: {fileID: 3009562876433466686, guid: 83ff085338d42a54cbb1444814916fca, type: 3}
       propertyPath: m_LocalPosition.x
@@ -968,6 +1058,10 @@ PrefabInstance:
       propertyPath: m_BrainParameters.VectorActionSize.Array.data[1]
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 6716836657559655885, guid: 83ff085338d42a54cbb1444814916fca, type: 3}
+      propertyPath: yourButton
+      value: 
+      objectReference: {fileID: 1368566635}
     - target: {fileID: 6716836657559655886, guid: 83ff085338d42a54cbb1444814916fca, type: 3}
       propertyPath: m_LocalPosition.y
       value: -0.54
@@ -1002,27 +1096,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6716836657559655890, guid: 83ff085338d42a54cbb1444814916fca, type: 3}
       propertyPath: m_RayLength
-      value: 27
+      value: 151
       objectReference: {fileID: 0}
     - target: {fileID: 6716836657559655890, guid: 83ff085338d42a54cbb1444814916fca, type: 3}
       propertyPath: m_MaxRayDegrees
-      value: 140
+      value: 118
       objectReference: {fileID: 0}
     - target: {fileID: 6716836657559655890, guid: 83ff085338d42a54cbb1444814916fca, type: 3}
       propertyPath: m_RaysPerDirection
-      value: 17
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 6716836657559655890, guid: 83ff085338d42a54cbb1444814916fca, type: 3}
       propertyPath: m_SphereCastRadius
-      value: 0.71
+      value: 0.44
       objectReference: {fileID: 0}
     - target: {fileID: 6716836657559655890, guid: 83ff085338d42a54cbb1444814916fca, type: 3}
       propertyPath: m_EndVerticalOffset
-      value: 0
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 6716836657559655890, guid: 83ff085338d42a54cbb1444814916fca, type: 3}
       propertyPath: m_ObservationStacks
-      value: 20
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 6716836657559655890, guid: 83ff085338d42a54cbb1444814916fca, type: 3}
       propertyPath: m_RayLayerMask.m_Bits
@@ -1030,7 +1124,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6716836657559655890, guid: 83ff085338d42a54cbb1444814916fca, type: 3}
       propertyPath: m_StartVerticalOffset
-      value: 0
+      value: -0.2
       objectReference: {fileID: 0}
     - target: {fileID: 6716836657559655890, guid: 83ff085338d42a54cbb1444814916fca, type: 3}
       propertyPath: m_DetectableTags.Array.size
@@ -1081,6 +1175,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 6716836656455038948}
     - target: {fileID: 6716836657767843208, guid: 83ff085338d42a54cbb1444814916fca, type: 3}
+      propertyPath: EndGame
+      value: 
+      objectReference: {fileID: 120820522}
+    - target: {fileID: 6716836657767843208, guid: 83ff085338d42a54cbb1444814916fca, type: 3}
       propertyPath: prefab1
       value: 
       objectReference: {fileID: 6094685320995127306, guid: c3cc564a9dc9eb142be8ec891b15089b, type: 3}
@@ -1088,6 +1186,10 @@ PrefabInstance:
       propertyPath: prefab2
       value: 
       objectReference: {fileID: 1645806177078891547, guid: d59d5f01842c4094c90ad8a19df7f5e5, type: 3}
+    - target: {fileID: 6716836657767843208, guid: 83ff085338d42a54cbb1444814916fca, type: 3}
+      propertyPath: yourButton
+      value: 
+      objectReference: {fileID: 1368566635}
     - target: {fileID: 6716836657767843209, guid: 83ff085338d42a54cbb1444814916fca, type: 3}
       propertyPath: m_LocalScale.x
       value: 40
@@ -1227,35 +1329,3 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 243950672691534345, guid: 83ff085338d42a54cbb1444814916fca, type: 3}
   m_PrefabInstance: {fileID: 6716836656455038947}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &6716836656455038949 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6716836657559655883, guid: 83ff085338d42a54cbb1444814916fca, type: 3}
-  m_PrefabInstance: {fileID: 6716836656455038947}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &6716836656455038950
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6716836656455038949}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6bb6b867a41448888c1cd4f99643ad71, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SensorName: RayPerceptionSensor
-  m_DetectableTags:
-  - cherry
-  m_RaysPerDirection: 3
-  m_MaxRayDegrees: 12
-  m_SphereCastRadius: 0.5
-  m_RayLength: 20
-  m_RayLayerMask:
-    serializedVersion: 2
-    m_Bits: 4294967291
-  m_ObservationStacks: 1
-  rayHitColor: {r: 1, g: 0, b: 0, a: 1}
-  rayMissColor: {r: 1, g: 1, b: 1, a: 1}
-  m_StartVerticalOffset: 1
-  m_EndVerticalOffset: 1

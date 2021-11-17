@@ -1,9 +1,11 @@
 ﻿using Unity.MLAgents;
 using UnityEngine;
+using UnityEngine.UI;
+using System.Collections;
 
 public class MLAgentPlayer : Agent
 {
-    public float force = 50.0f;
+    public float force = 20.0f;
     public Transform reset = null;
     public TextMesh score = null;
     public Vector3 jump;
@@ -13,15 +15,23 @@ public class MLAgentPlayer : Agent
     public bool air = true;
     private float points = 0;
     public float moveSpeed = 0.1f;
-    
+    public Button yourButton = null;
+
     public override void Initialize()
     {
+        Button btn = yourButton.GetComponent<Button>();
+        btn.onClick.AddListener(TaskOnClick);
         rb = this.GetComponent<Rigidbody>();
         jump = new Vector3(0.0f, 0.15f, 0.0f);
         right = new Vector3(0.15f, 0.0f, 0.0f);
         left = new Vector3(-0.15f, 0.0f, 0.0f);
         ResetMyAgent();
     }
+
+    void TaskOnClick(){
+         points = 0;
+         score.text = "Score: " + points.ToString();
+	}
 
     public override void OnActionReceived(float[] vectorAction)
     {
@@ -63,7 +73,7 @@ public class MLAgentPlayer : Agent
 
         if (collision.gameObject.CompareTag("cherry") == true)
         {
-            AddReward(0.4f);
+            AddReward(0.5f);
             points = points + 2;
             score.text = "Score: " + points.ToString();
             Destroy(collision.gameObject);
@@ -72,14 +82,14 @@ public class MLAgentPlayer : Agent
         if (collision.gameObject.CompareTag("obstacle") == true || collision.gameObject.CompareTag("obstacle1") == true
         || collision.gameObject.CompareTag("obstacle2") == true)
         {
-            AddReward(-0.8f);          
+            AddReward(-1.0f);
             Destroy(collision.gameObject);
             EndEpisode();
         }
 
         if (collision.gameObject.CompareTag("walltop") == true)
         {
-            AddReward(-0.8f);
+            AddReward(-0.9f);
             EndEpisode();
         }
 
@@ -89,7 +99,7 @@ public class MLAgentPlayer : Agent
     {
         if (other.CompareTag("wallward") == true || other.CompareTag("wallward1") == true || other.CompareTag("wallward2") == true)
         {
-            AddReward(0.1f);
+            AddReward(0.2f);
             points++;
             score.text = "Score: " + points.ToString();
         }     
