@@ -84,14 +84,18 @@ public class MLAgentPlayer : Agent
         {
             AddReward(-1.0f);
             Destroy(collision.gameObject);
+            //if (GameObject.Find("charry(Clone)") != null)
+            //{
+            //    Destroy(GameObject.Find("charry(Clone)"));
+            //}
             EndEpisode();
         }
 
-        if (collision.gameObject.CompareTag("walltop") == true)
-        {
-            AddReward(-0.9f);
-            EndEpisode();
-        }
+//        if (collision.gameObject.CompareTag("walltop") == true)
+//        {
+//            AddReward(-0.9f);
+//            EndEpisode();
+//        }
 
     }
 

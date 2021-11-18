@@ -42,7 +42,7 @@ public class Spawner : MonoBehaviour
                 go.transform.position = new Vector3(reset.position.x + 1, reset.position.y - 4.5f, reset.position.z);
                 if(charry == 2){
                     go = Instantiate(c);
-                    go.transform.position = new Vector3(reset.position.x - 1 + (p*4f), reset.position.y - 1, reset.position.z + 2);
+                    go.transform.position = new Vector3(reset.position.x - 1 + (p*4f), reset.position.y, reset.position.z);
                 }
                 Invoke("SpawnObstacle", 5.0f);
             }
