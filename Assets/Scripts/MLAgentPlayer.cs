@@ -22,7 +22,7 @@ public class MLAgentPlayer : Agent
         Button btn = yourButton.GetComponent<Button>();
         btn.onClick.AddListener(TaskOnClick);
         rb = this.GetComponent<Rigidbody>();
-        jump = new Vector3(0.0f, 0.15f, 0.0f);
+        jump = new Vector3(0.0f, 0.2f, 0.0f);
         right = new Vector3(0.15f, 0.0f, 0.0f);
         left = new Vector3(-0.15f, 0.0f, 0.0f);
         ResetMyAgent();
@@ -35,17 +35,17 @@ public class MLAgentPlayer : Agent
 
     public override void OnActionReceived(float[] vectorAction)
     {
-        if (vectorAction[0] == 3)
+        if (vectorAction[0] == 1)
         {
             UpForce();
         }
 
-        if (vectorAction[0] == 1)
+        if (vectorAction[0] == 2)
         {
             MoveRight();
         }
 
-        if (vectorAction[0] == 2)
+        if (vectorAction[0] == 3)
         {
             MoveLeft();
         }
@@ -61,11 +61,11 @@ public class MLAgentPlayer : Agent
         actionsOut[0] = 0;
         //actionsOut[1] = 0;
         if (Input.GetKey(KeyCode.UpArrow) == true)
-            actionsOut[0] = 3;
-        if (Input.GetKey(KeyCode.RightArrow) == true)
             actionsOut[0] = 1;
-        if (Input.GetKey(KeyCode.LeftArrow) == true)
+        if (Input.GetKey(KeyCode.RightArrow) == true)
             actionsOut[0] = 2;
+        if (Input.GetKey(KeyCode.LeftArrow) == true)
+            actionsOut[0] = 3;
     }
 
     private void OnCollisionStay(Collision collision)
@@ -73,7 +73,7 @@ public class MLAgentPlayer : Agent
 
         if (collision.gameObject.CompareTag("cherry") == true)
         {
-            AddReward(0.5f);
+            AddReward(0.2f);
             points = points + 2;
             score.text = "Score: " + points.ToString();
             Destroy(collision.gameObject);
@@ -91,11 +91,11 @@ public class MLAgentPlayer : Agent
             EndEpisode();
         }
 
-//        if (collision.gameObject.CompareTag("walltop") == true)
-//        {
-//            AddReward(-0.9f);
-//            EndEpisode();
-//        }
+        if (collision.gameObject.CompareTag("walltop") == true)
+        {
+            AddReward(-0.9f);
+            EndEpisode();
+        }
 
     }
 
