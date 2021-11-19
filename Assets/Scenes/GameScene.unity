@@ -5266,6 +5266,10 @@ PrefabInstance:
       value: 6.6
       objectReference: {fileID: 0}
     - target: {fileID: 6433240580304346105, guid: 83ff085338d42a54cbb1444814916fca, type: 3}
+      propertyPath: m_ObservationStacks
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6433240580304346105, guid: 83ff085338d42a54cbb1444814916fca, type: 3}
       propertyPath: m_StartVerticalOffset
       value: 0.7
       objectReference: {fileID: 0}
@@ -5396,7 +5400,7 @@ PrefabInstance:
     - target: {fileID: 6716836657559655884, guid: 83ff085338d42a54cbb1444814916fca, type: 3}
       propertyPath: m_Model
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 5022602860645237092, guid: 6b0acf3c770416747ab8ad590d7a5e70, type: 3}
     - target: {fileID: 6716836657559655884, guid: 83ff085338d42a54cbb1444814916fca, type: 3}
       propertyPath: m_BehaviorName
       value: MLPlayer

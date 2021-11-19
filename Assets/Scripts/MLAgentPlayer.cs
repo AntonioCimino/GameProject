@@ -72,7 +72,7 @@ public class MLAgentPlayer : Agent
 
         if (collision.gameObject.CompareTag("cherry") == true)
         {
-            AddReward(0.2f);
+            AddReward(0.5f);
             points = points + 2;
             score.text = "Score: " + points.ToString();
             Destroy(collision.gameObject);
@@ -100,7 +100,7 @@ public class MLAgentPlayer : Agent
     {
         if (other.CompareTag("wallward") == true || other.CompareTag("wallward1") == true || other.CompareTag("wallward2") == true)
         {
-            AddReward(0.2f);
+            AddReward(0.1f);
             points++;
             score.text = "Score: " + points.ToString();
         }     
@@ -113,7 +113,7 @@ public class MLAgentPlayer : Agent
         }
 
         if(air == true){
-            rb.velocity += 0.9f * Vector3.up;
+            rb.velocity += 3f * Vector3.up;
             air = false;
         }
     }
