@@ -90,8 +90,8 @@ public class MLAgentPlayer : Agent
 
         if (collision.gameObject.CompareTag("walltop") == true)
         {
-            AddReward(-0.9f);
-            EndEpisode();
+            //AddReward(-0.9f);
+            //EndEpisode();
         }
 
     }
