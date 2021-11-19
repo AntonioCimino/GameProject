@@ -22,7 +22,7 @@ public class MLAgentPlayer : Agent
         Button btn = yourButton.GetComponent<Button>();
         btn.onClick.AddListener(TaskOnClick);
         rb = this.GetComponent<Rigidbody>();
-        jump = new Vector3(0.0f, 0.2f, 0.0f);
+        jump = new Vector3(0.0f, 1.5f, 0.0f);
         right = new Vector3(0.15f, 0.0f, 0.0f);
         left = new Vector3(-0.15f, 0.0f, 0.0f);
         ResetMyAgent();
@@ -108,12 +108,12 @@ public class MLAgentPlayer : Agent
 
     private void UpForce()
     {
-        if(this.transform.position.y < 2.5f){
+        if(this.transform.position.y < 3f){
             air = true;
         }
 
         if(air == true){
-            rb.velocity += 3f * Vector3.up;
+            rb.velocity += jump;
             air = false;
         }
     }
