@@ -59,7 +59,6 @@ public class MLAgentPlayer : Agent
     public override void Heuristic(float[] actionsOut)
     {
         actionsOut[0] = 0;
-        //actionsOut[1] = 0;
         if (Input.GetKey(KeyCode.UpArrow) == true)
             actionsOut[0] = 1;
         if (Input.GetKey(KeyCode.RightArrow) == true)
@@ -84,10 +83,8 @@ public class MLAgentPlayer : Agent
         {
             AddReward(-1.0f);
             Destroy(collision.gameObject);
-            //if (GameObject.Find("charry(Clone)") != null)
-            //{
-            //    Destroy(GameObject.Find("charry(Clone)"));
-            //}
+            points = points - 1;
+            score.text = "Score: " + points.ToString();
             EndEpisode();
         }
 
@@ -111,12 +108,12 @@ public class MLAgentPlayer : Agent
 
     private void UpForce()
     {
-        if(this.transform.position.y < 2f){
+        if(this.transform.position.y < 2.5f){
             air = true;
         }
 
         if(air == true){
-            rb.AddForce(jump * force, ForceMode.Impulse);
+            rb.velocity += 0.9f * Vector3.up;
             air = false;
         }
     }
@@ -133,6 +130,6 @@ public class MLAgentPlayer : Agent
 
     private void ResetMyAgent()
     {
-        this.transform.position = new Vector3(reset.position.x, reset.position.y, reset.position.z);
+        this.transform.position = new Vector3(reset.position.x, reset.position.y - 1, reset.position.z);
     }
 }

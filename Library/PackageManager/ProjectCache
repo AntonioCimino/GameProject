@@ -5,7 +5,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637728395783717994
+      ticks: 637728675933185834
     m_Hash: 3377138300
   m_LockFileStatus:
     m_FilePath: D:/GameProject-1/Packages/packages-lock.json
@@ -13,7 +13,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637728395783717994
+      ticks: 637728675933185834
     m_Hash: 1622070925
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}

@@ -5396,7 +5396,7 @@ PrefabInstance:
     - target: {fileID: 6716836657559655884, guid: 83ff085338d42a54cbb1444814916fca, type: 3}
       propertyPath: m_Model
       value: 
-      objectReference: {fileID: 5022602860645237092, guid: f74f08549d7529b46bf1cd9ed5545fd2, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 6716836657559655884, guid: 83ff085338d42a54cbb1444814916fca, type: 3}
       propertyPath: m_BehaviorName
       value: MLPlayer
