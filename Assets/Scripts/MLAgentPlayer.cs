@@ -22,7 +22,7 @@ public class MLAgentPlayer : Agent
         Button btn = yourButton.GetComponent<Button>();
         btn.onClick.AddListener(TaskOnClick);
         rb = this.GetComponent<Rigidbody>();
-        jump = new Vector3(0.0f, 1.5f, 0.0f);
+        jump = new Vector3(0.0f, 1.0f, 0.0f);
         right = new Vector3(0.15f, 0.0f, 0.0f);
         left = new Vector3(-0.15f, 0.0f, 0.0f);
         ResetMyAgent();

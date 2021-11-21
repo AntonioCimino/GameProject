@@ -41,7 +41,7 @@ public class Spawner : MonoBehaviour
                 GameObject go = Instantiate(prefab);
                 go.transform.position = new Vector3(reset.position.x + 1, reset.position.y - 5f, reset.position.z);
                 go = Instantiate(wall);
-                go.transform.position = new Vector3(reset.position.x + 1, reset.position.y - 2f, reset.position.z - 13);
+                go.transform.position = new Vector3(reset.position.x + 1, reset.position.y - 2f, reset.position.z - 11);
                 if(charry == 2){
                     go = Instantiate(c);
                     go.transform.position = new Vector3(reset.position.x - 1 + (p*4f), reset.position.y - 1, reset.position.z);
@@ -53,7 +53,7 @@ public class Spawner : MonoBehaviour
                 GameObject go = Instantiate(prefab1);
                 go.transform.position = new Vector3(reset.position.x - 1, reset.position.y, reset.position.z);
                 go = Instantiate(wall);
-                go.transform.position = new Vector3(reset.position.x - 3, reset.position.y - 2f, reset.position.z - 10);
+                go.transform.position = new Vector3(reset.position.x, reset.position.y - 2f, reset.position.z - 8);
                 if(charry == 2){
                     go = Instantiate(c);
                     go.transform.position = new Vector3(reset.position.x - 1 + (p*4f), reset.position.y - 5, reset.position.z - 9);
@@ -65,7 +65,7 @@ public class Spawner : MonoBehaviour
                 GameObject go = Instantiate(prefab2);
                 go.transform.position = new Vector3(reset.position.x + 4, reset.position.y, reset.position.z);
                 go = Instantiate(wall);
-                go.transform.position = new Vector3(reset.position.x - 3, reset.position.y - 2f, reset.position.z - 10);
+                go.transform.position = new Vector3(reset.position.x, reset.position.y - 2f, reset.position.z - 8);
                 if(charry == 2){
                     go = Instantiate(c);
                     go.transform.position = new Vector3(reset.position.x - 1 + (p*4f), reset.position.y - 5, reset.position.z - 10);

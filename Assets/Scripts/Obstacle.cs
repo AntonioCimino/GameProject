@@ -16,4 +16,12 @@ public class Obstacle : MonoBehaviour
             Destroy(this.gameObject);
         }            
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("wallend") == true)
+        {
+            Destroy(this.gameObject);
+        }
+    }
 }

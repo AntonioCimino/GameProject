@@ -1355,7 +1355,7 @@ PrefabInstance:
     - target: {fileID: 2970984454251931076, guid: 83ff085338d42a54cbb1444814916fca, type: 3}
       propertyPath: m_Model
       value: 
-      objectReference: {fileID: 5022602860645237092, guid: c8fc96fd529e5964ea6fd15956af47d8, type: 3}
+      objectReference: {fileID: 5022602860645237092, guid: b473e7dac8776f94e9bd3cdf7837b5f6, type: 3}
     - target: {fileID: 2970984454251931077, guid: 83ff085338d42a54cbb1444814916fca, type: 3}
       propertyPath: yourButton
       value: 
