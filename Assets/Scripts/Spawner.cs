@@ -10,14 +10,14 @@ public class Spawner : MonoBehaviour
     public GameObject c = null;
     public GameObject wall = null;
     public Transform reset = null;
-    public GameObject EndGame = null;
+    //public GameObject EndGame = null;
     public float timeRemaining = 10;
-    public Button yourButton = null;
+    //public Button yourButton = null;
 
     private void Start()
     {
-        Button btn = yourButton.GetComponent<Button>();
-        btn.onClick.AddListener(TaskOnClick);
+        //Button btn = yourButton.GetComponent<Button>();
+        //btn.onClick.AddListener(TaskOnClick);
         Invoke("SpawnObstacle", 1.0f);
     }
 
@@ -31,7 +31,7 @@ public class Spawner : MonoBehaviour
     {
         if (timeRemaining > 0)
         {
-            timeRemaining = timeRemaining - 1;
+            //timeRemaining = timeRemaining - 1;
 
             int n = Random.Range(0, 3);
             int charry = Random.Range(0, 3);
@@ -40,8 +40,8 @@ public class Spawner : MonoBehaviour
             if(n == 0){
                 GameObject go = Instantiate(prefab);
                 go.transform.position = new Vector3(reset.position.x + 1, reset.position.y - 5f, reset.position.z);
-                go = Instantiate(wall);
-                go.transform.position = new Vector3(reset.position.x + 1, reset.position.y - 2f, reset.position.z - 11);
+                //go = Instantiate(wall);
+                //go.transform.position = new Vector3(reset.position.x + 1, reset.position.y - 2f, reset.position.z - 11);
                 if(charry == 2){
                     go = Instantiate(c);
                     go.transform.position = new Vector3(reset.position.x - 1 + (p*4f), reset.position.y - 1, reset.position.z);
@@ -52,8 +52,8 @@ public class Spawner : MonoBehaviour
             if(n == 1){
                 GameObject go = Instantiate(prefab1);
                 go.transform.position = new Vector3(reset.position.x - 1, reset.position.y, reset.position.z);
-                go = Instantiate(wall);
-                go.transform.position = new Vector3(reset.position.x, reset.position.y - 2f, reset.position.z - 8);
+                //go = Instantiate(wall);
+                //go.transform.position = new Vector3(reset.position.x, reset.position.y - 2f, reset.position.z - 8);
                 if(charry == 2){
                     go = Instantiate(c);
                     go.transform.position = new Vector3(reset.position.x - 1 + (p*4f), reset.position.y - 5, reset.position.z - 9);
@@ -64,8 +64,8 @@ public class Spawner : MonoBehaviour
             if(n == 2){
                 GameObject go = Instantiate(prefab2);
                 go.transform.position = new Vector3(reset.position.x + 4, reset.position.y, reset.position.z);
-                go = Instantiate(wall);
-                go.transform.position = new Vector3(reset.position.x, reset.position.y - 2f, reset.position.z - 8);
+                //go = Instantiate(wall);
+                //go.transform.position = new Vector3(reset.position.x, reset.position.y - 2f, reset.position.z - 8);
                 if(charry == 2){
                     go = Instantiate(c);
                     go.transform.position = new Vector3(reset.position.x - 1 + (p*4f), reset.position.y - 5, reset.position.z - 10);
@@ -73,7 +73,7 @@ public class Spawner : MonoBehaviour
                 Invoke("SpawnObstacle", 5.0f);
             }
         } else {
-            EndGame.gameObject.SetActive(true);
+            //EndGame.gameObject.SetActive(true);
         }
     }
 }
