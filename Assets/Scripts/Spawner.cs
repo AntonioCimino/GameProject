@@ -23,7 +23,7 @@ public class Spawner : MonoBehaviour
 
     void TaskOnClick(){
         timeRemaining = 10;
-        EndGame.gameObject.SetActive(false);
+        //EndGame.gameObject.SetActive(false);
         Invoke("SpawnObstacle", 1.0f);
 	}
 
