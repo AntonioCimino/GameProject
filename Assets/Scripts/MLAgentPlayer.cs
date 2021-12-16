@@ -15,12 +15,12 @@ public class MLAgentPlayer : Agent
     public bool air = true;
     private float points = 0;
     public float moveSpeed = 0.1f;
-    //public Button yourButton = null;
+    public Button yourButton = null;
 
     public override void Initialize()
     {
-        //Button btn = yourButton.GetComponent<Button>();
-        //btn.onClick.AddListener(TaskOnClick);
+        Button btn = yourButton.GetComponent<Button>();
+        btn.onClick.AddListener(TaskOnClick);
         rb = this.GetComponent<Rigidbody>();
         jump = new Vector3(0.0f, 1.0f, 0.0f);
         right = new Vector3(0.15f, 0.0f, 0.0f);
@@ -93,8 +93,8 @@ public class MLAgentPlayer : Agent
         //Penalità muri laterali e superiori
         if (collision.gameObject.CompareTag("walltop") == true)
         {
-            AddReward(-0.9f);
-            EndEpisode();
+            //AddReward(-0.9f);
+            //EndEpisode();
         }
 
     }
@@ -112,7 +112,7 @@ public class MLAgentPlayer : Agent
         //Premio superamento ostacoli inferiori
         if (other.CompareTag("wallward") == true)
         {
-            AddReward(0.1f);
+            AddReward(0.5f);
             points++;
             score.text = "Score: " + points.ToString();
         }
@@ -127,7 +127,7 @@ public class MLAgentPlayer : Agent
         if(air == true){
             rb.velocity += jump;
             //Penalità salto
-            AddReward(-0.2f);
+            AddReward(-0.005f);
             air = false;
         }
     }
